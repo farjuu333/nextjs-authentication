@@ -1,6 +1,20 @@
-
-
 const MOdelsPage = async() => {
+    // (SSR=server site rendering)
+    // const res = await fetch("http://localhost:8000/models",{cache:'no-store'});
+    // const models = await res.json();
+    // console.log(models);
+
+    // (ISR=incremental static re-generation)
+    // const res = await fetch("http://localhost:8000/models",{next:{revalidate:10}});
+    // const models = await res.json();
+    // console.log(models);
+
+    // (SSG=static site generation)
+    // const res = await fetch("http://localhost:8000/models",{cache:"force-store"});
+    // const models = await res.json();
+    // console.log(models);
+
+
     const res = await fetch("http://localhost:8000/models");
     const models = await res.json();
     console.log(models);
